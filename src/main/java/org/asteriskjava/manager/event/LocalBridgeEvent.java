@@ -22,7 +22,7 @@ package org.asteriskjava.manager.event;
  * As of Asterisk 1.6 the Bridge event is reported directly by Asterisk. Asterisk versions up to
  * 1.4 report individual events: {@link LinkEvent} and
  * {@link UnlinkEvent}.For maximum compatibily do not use the Link and Unlink
- * events in your code. Just use the Bridge event and check for {@link #isLink()} and {@link #isUnlink()}.
+ * events in your code.
  * <br>
  * It is implemented in <code>channel.c</code>
  *
@@ -39,89 +39,17 @@ public class LocalBridgeEvent extends ManagerEvent
     public static final String BRIDGE_STATE_LINK = "Link";
     public static final String BRIDGE_STATE_UNLINK = "Unlink";
 
-    /**
-     * A <code>channel.c</code> bridge.
-     */
-    public static final String BRIDGE_TYPE_CORE = "core";
-
-    /**
-     * An RTP native bridge.
-     */
-    public static final String BRIDGE_TYPE_RTP_NATIVE = "rtp-native";
-
-    /**
-     * An RTP peer-2-peer bridge (NAT support only).
-     */
-    public static final String BRIDGE_TYPE_RTP_DIRECT = "rtp-direct";
-
-    /**
-     * A remote (re-invite) bridge.
-     */
-    public static final String BRIDGE_TYPE_RTP_REMOTE = "rtp-remote";
-
-    private String bridgeState;
-    private String bridgeType;
     private String uniqueId1;
     private String uniqueId2;
+    private String context;
+    private String exten;
+    private String localOptimization;
     private String channel1;
     private String channel2;
-    private String callerId1;
-    private String callerId2;
 
     public LocalBridgeEvent(Object source)
     {
         super(source);
-    }
-
-    /**
-     * Returns the bridge state.
-     *
-     * @return "Link" if the two channels have been linked, "Unlink" if they have been unlinked.
-     * @see #BRIDGE_STATE_LINK
-     * @see #BRIDGE_STATE_UNLINK
-     * @since 1.0.0
-     */
-    public String getBridgeState()
-    {
-        return bridgeState;
-    }
-
-    /**
-     * Sets the bridge state.
-     *
-     * @param bridgeState "Link" if the two channels have been linked, "Unlink" if they have been unlinked.
-     * @since 1.0.0
-     */
-    public void setBridgeState(String bridgeState)
-    {
-        this.bridgeState = bridgeState;
-    }
-
-    /**
-     * Returns the bridge type.<p>
-     * Available since Asterisk 1.6.
-     *
-     * @return the bridge type.
-     * @see #BRIDGE_TYPE_CORE
-     * @see #BRIDGE_TYPE_RTP_NATIVE
-     * @see #BRIDGE_TYPE_RTP_DIRECT
-     * @see #BRIDGE_TYPE_RTP_REMOTE
-     * @since 1.0.0
-     */
-    public String getBridgeType()
-    {
-        return bridgeType;
-    }
-
-    /**
-     * Sets the bridge type.
-     *
-     * @param bridgeType the bridge type.
-     * @since 1.0.0
-     */
-    public void setBridgeType(String bridgeType)
-    {
-        this.bridgeType = bridgeType;
     }
 
     /**
@@ -205,68 +133,50 @@ public class LocalBridgeEvent extends ManagerEvent
     }
 
     /**
-     * Returns the Caller*Id number of the first channel.
      *
-     * @return the Caller*Id number of the first channel.
-     * @since 0.2
+     * @return
      */
-    public String getCallerId1()
-    {
-        return callerId1;
+    public String getContext() {
+        return context;
     }
 
     /**
-     * Sets the Caller*Id number of the first channel.
      *
-     * @param callerId1 the Caller*Id number of the first channel.
-     * @since 0.2
+     * @param context
      */
-    public void setCallerId1(String callerId1)
-    {
-        this.callerId1 = callerId1;
+    public void setContext(String context) {
+        this.context = context;
     }
 
     /**
-     * Returns the Caller*Id number of the second channel.
      *
-     * @return the Caller*Id number of the second channel.
-     * @since 0.2
+     * @return
      */
-    public String getCallerId2()
-    {
-        return callerId2;
+    public String getExten() {
+        return exten;
     }
 
     /**
-     * Sets the Caller*Id number of the second channel.
      *
-     * @param callerId2 the Caller*Id number of the second channel.
-     * @since 0.2
+     * @param exten
      */
-    public void setCallerId2(String callerId2)
-    {
-        this.callerId2 = callerId2;
+    public void setExten(String exten) {
+        this.exten = exten;
     }
 
     /**
-     * Returns whether the two channels have been linked.
      *
-     * @return <code>true</code> the two channels have been linked, <code>false</code> if they have been unlinked.
-     * @since 1.0.0
+     * @return
      */
-    public boolean isLink()
-    {
-        return bridgeState != null && BRIDGE_STATE_LINK.equalsIgnoreCase(bridgeState);
+    public String getLocalOptimization() {
+        return localOptimization;
     }
 
     /**
-     * Returns whether the two channels have been unlinked.
      *
-     * @return <code>true</code> the two channels have been unlinked, <code>false</code> if they have been linked.
-     * @since 1.0.0
+     * @param localOptimization
      */
-    public boolean isUnlink()
-    {
-        return bridgeState != null && BRIDGE_STATE_UNLINK.equalsIgnoreCase(bridgeState);
+    public void setLocalOptimization(String localOptimization) {
+        this.localOptimization = localOptimization;
     }
 }
