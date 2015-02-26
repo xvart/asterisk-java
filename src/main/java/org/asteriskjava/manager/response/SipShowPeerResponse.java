@@ -19,7 +19,7 @@ public class SipShowPeerResponse extends ManagerResponse
     private String chanObjectType;
     private Boolean secretExist;
     private Boolean md5SecretExist;
-	private Boolean remoteSecretExist;
+    private Boolean remoteSecretExist;
     private String context;
     private String language;
     private String accountCode;
@@ -41,10 +41,10 @@ public class SipShowPeerResponse extends ManagerResponse
     private Boolean sipAuthInsecure;
     private Boolean sipNatSupport;
     private Boolean acl;
-	private Boolean sipT38support;
-	private String sipT38ec;
-	private Integer sipT38MaxDtgrm;
-	private Boolean sipDirectMedia;
+    private Boolean sipT38support;
+    private String sipT38ec;
+    private String sipT38MaxDtgrm;
+    private Boolean sipDirectMedia;
     private Boolean sipCanReinvite;
     private Boolean sipPromiscRedir;
     private Boolean sipUserPhone;
@@ -68,9 +68,16 @@ public class SipShowPeerResponse extends ManagerResponse
     private String sipUserAgent;
     private String regContact;
     private Integer qualifyFreq; // "%d ms"
-	private String parkingLot;
+    private String parkingLot;
+    private Integer maxforwards;
+    private String siprtpengine;
+    private String tonezone;
+    private String sipforcerport;
+    private String sipencryption;
+    private String sipcomedia;
+    private String sipusereasonheader;
 
-	private Map<String, String> chanVariable;
+    private Map<String, String> chanVariable;
 
     public String getChannelType()
     {
@@ -362,12 +369,12 @@ public class SipShowPeerResponse extends ManagerResponse
 		this.sipT38ec = sipT38ec;
 	}
 
-	public Integer getSipT38MaxDtgrm()
+	public String getSipT38MaxDtgrm()
 	{
 		return sipT38MaxDtgrm;
 	}
 
-	public void setSipT38MaxDtgrm(Integer sipT38MaxDtgrm)
+	public void setSipT38MaxDtgrm(String sipT38MaxDtgrm)
 	{
 		this.sipT38MaxDtgrm = sipT38MaxDtgrm;
 	}
@@ -643,4 +650,60 @@ public class SipShowPeerResponse extends ManagerResponse
 	public void setChanVariable(final Map<String, String> chanVariable) {
 		this.chanVariable = chanVariable;
 	}
+
+    public Integer getMaxforwards() {
+        return maxforwards;
+    }
+
+    public void setMaxforwards(Integer maxforwards) {
+        this.maxforwards = maxforwards;
+    }
+
+    public String getSiprtpengine() {
+        return siprtpengine;
+    }
+
+    public void setSiprtpengine(String siprtpengine) {
+        this.siprtpengine = siprtpengine;
+    }
+
+    public String getTonezone() {
+        return tonezone;
+    }
+
+    public void setTonezone(String tonezone) {
+        this.tonezone = tonezone;
+    }
+
+    public String getSipforcerport() {
+        return sipforcerport;
+    }
+
+    public void setSipforcerport(String sipforcerport) {
+        this.sipforcerport = sipforcerport;
+    }
+
+    public String getSipencryption() {
+        return sipencryption;
+    }
+
+    public void setSipencryption(String sipencryption) {
+        this.sipencryption = sipencryption;
+    }
+
+    public String getSipcomedia() {
+        return sipcomedia;
+    }
+
+    public void setSipcomedia(String sipcomedia) {
+        this.sipcomedia = sipcomedia;
+    }
+
+    public String getSipusereasonheader() {
+        return sipusereasonheader;
+    }
+
+    public void setSipusereasonheader(String sipusereasonheader) {
+        this.sipusereasonheader = sipusereasonheader;
+    }
 }

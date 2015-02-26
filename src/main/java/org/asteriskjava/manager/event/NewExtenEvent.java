@@ -37,6 +37,7 @@ public class NewExtenEvent extends ManagerEvent
     private String appData;
     private Integer priority;
     private String channel;
+    private String calleridnum;
 
     /**
      * @param source
@@ -157,5 +158,13 @@ public class NewExtenEvent extends ManagerEvent
     public void setPriority(Integer priority)
     {
         this.priority = priority;
+    }
+
+    public String getCalleridnum() {
+        return calleridnum;
+    }
+
+    public void setCalleridnum(String calleridnum) {
+        this.calleridnum = calleridnum;
     }
 }

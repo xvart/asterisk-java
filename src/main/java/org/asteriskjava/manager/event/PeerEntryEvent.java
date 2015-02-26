@@ -51,6 +51,11 @@ public class PeerEntryEvent extends ResponseEvent
     private String realtimeDevice;
     private Boolean trunk;
     private String encryption;
+    private String forcerport;
+    private String autoforcerport;
+    private String comedia;
+    private String autocomedia;
+    
 
     /**
      * Creates a new instance.
@@ -316,5 +321,37 @@ public class PeerEntryEvent extends ResponseEvent
     public void setEncryption(String encryption)
     {
         this.encryption = encryption;
+    }
+
+    public String getForcerport() {
+        return forcerport;
+    }
+
+    public void setForcerport(String forcerport) {
+        this.forcerport = forcerport;
+    }
+
+    public String getAutoforcerport() {
+        return autoforcerport;
+    }
+
+    public void setAutoforcerport(String autoforcerport) {
+        this.autoforcerport = autoforcerport;
+    }
+
+    public String getComedia() {
+        return comedia;
+    }
+
+    public void setComedia(String comedia) {
+        this.comedia = comedia;
+    }
+
+    public String getAutocomedia() {
+        return autocomedia;
+    }
+
+    public void setAutocomedia(String autocomedia) {
+        this.autocomedia = autocomedia;
     }
 }

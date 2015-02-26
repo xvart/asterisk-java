@@ -33,6 +33,8 @@ public class NewChannelEvent extends AbstractChannelStateEvent
     private String accountCode;
     private String context;
     private String exten;
+    private String language;
+    private Integer priority;
 
     public NewChannelEvent(Object source)
     {
@@ -106,5 +108,21 @@ public class NewChannelEvent extends AbstractChannelStateEvent
     public void setExten(String exten)
     {
         this.exten = exten;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public Integer getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Integer priority) {
+        this.priority = priority;
     }
 }
