@@ -36,6 +36,17 @@ public class NewCallerIdEvent extends AbstractChannelEvent
      */
     private Integer cidCallingPres;
     private String cidCallingPresTxt;
+    private String language;
+    private String context;
+    private String connectedlinenum;
+    private String connectedlinename;
+    private String channelstatedesc;
+    private String exten;
+    
+    
+    private Integer priority;
+    private Integer channelstate;
+    
 
     public NewCallerIdEvent(Object source)
     {
@@ -98,5 +109,69 @@ public class NewCallerIdEvent extends AbstractChannelEvent
         {
             this.cidCallingPresTxt = s.substring(spaceIdx + 2, s.length() - 1);
         }
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public String getContext() {
+        return context;
+    }
+
+    public void setContext(String context) {
+        this.context = context;
+    }
+
+    public String getConnectedlinenum() {
+        return connectedlinenum;
+    }
+
+    public void setConnectedlinenum(String connectedlinenum) {
+        this.connectedlinenum = connectedlinenum;
+    }
+
+    public String getConnectedlinename() {
+        return connectedlinename;
+    }
+
+    public void setConnectedlinename(String connectedlinename) {
+        this.connectedlinename = connectedlinename;
+    }
+
+    public String getChannelstatedesc() {
+        return channelstatedesc;
+    }
+
+    public void setChannelstatedesc(String channelstatedesc) {
+        this.channelstatedesc = channelstatedesc;
+    }
+
+    public String getExten() {
+        return exten;
+    }
+
+    public void setExten(String exten) {
+        this.exten = exten;
+    }
+
+    public Integer getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Integer priority) {
+        this.priority = priority;
+    }
+
+    public Integer getChannelstate() {
+        return channelstate;
+    }
+
+    public void setChannelstate(Integer channelstate) {
+        this.channelstate = channelstate;
     }
 }

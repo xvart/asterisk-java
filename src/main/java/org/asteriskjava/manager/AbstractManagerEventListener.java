@@ -114,8 +114,9 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
     }
     
     protected void handleEvent(HangupRequestEvent event)
-       {
-       }
+    {
+    }
+    
     protected void handleEvent(DisconnectEvent event)
     {
     }
@@ -201,6 +202,10 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
     }
 
     protected void handleEvent(NewCallerIdEvent event)
+    {
+    }
+    
+    protected void handleEvent(NewConnectedLine event)
     {
     }
 
@@ -297,6 +302,10 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
     }
 
     protected void handleEvent(BridgeEvent event)
+    {
+    }
+    
+    protected void handleEvent(LocalBridgeEvent event)
     {
     }
 
@@ -535,6 +544,10 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
         {
             handleEvent((NewCallerIdEvent) event);
         }
+        else if (event instanceof NewConnectedLine)
+        {
+            handleEvent((NewConnectedLine) event);
+        }
         else if (event instanceof HangupEvent)
         {
             handleEvent((HangupEvent) event);
@@ -630,6 +643,10 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
         else if (event instanceof BridgeEvent)
         {
             handleEvent((BridgeEvent) event);
+        }
+        else if (event instanceof LocalBridgeEvent)
+        {
+            handleEvent((LocalBridgeEvent) event);
         }
         else if (event instanceof OriginateResponseEvent)
         {

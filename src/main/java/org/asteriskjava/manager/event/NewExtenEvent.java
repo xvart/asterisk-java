@@ -38,6 +38,16 @@ public class NewExtenEvent extends ManagerEvent
     private Integer priority;
     private String channel;
     private String calleridnum;
+    private String calleridname;
+    private String language;
+    private String connectedlinenum;
+    private String connectedlinename;
+    private String exten;
+    private String channelstatedesc;
+    
+    private Integer channelstate;
+    
+    
 
     /**
      * @param source
