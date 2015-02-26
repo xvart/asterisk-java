@@ -18,9 +18,27 @@ public class QueueSummaryCompleteEvent extends ResponseEvent
      * Serial version identifier.
      */
     private static final long serialVersionUID = -5044247858568827143L;
+    private Integer listitems;
+    private String eventlist;
 
     public QueueSummaryCompleteEvent(Object source)
     {
         super(source);
+    }
+
+    public Integer getListitems() {
+        return listitems;
+    }
+
+    public void setListitems(Integer listitems) {
+        this.listitems = listitems;
+    }
+
+    public String getEventlist() {
+        return eventlist;
+    }
+
+    public void setEventlist(String eventlist) {
+        this.eventlist = eventlist;
     }
 }
