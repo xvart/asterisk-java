@@ -13,6 +13,9 @@ public class ConfbridgeStartEvent extends ManagerEvent
     private static final long serialVersionUID = 1L;
 
     private String conference;
+    private String bridgecreator;
+    private String bridgename;
+    
 
     public ConfbridgeStartEvent(Object source)
     {
@@ -37,5 +40,21 @@ public class ConfbridgeStartEvent extends ManagerEvent
     public String getConference()
     {
         return conference;
+    }
+
+    public String getBridgecreator() {
+        return bridgecreator;
+    }
+
+    public void setBridgecreator(String bridgecreator) {
+        this.bridgecreator = bridgecreator;
+    }
+
+    public String getBridgename() {
+        return bridgename;
+    }
+
+    public void setBridgename(String bridgename) {
+        this.bridgename = bridgename;
     }
 }

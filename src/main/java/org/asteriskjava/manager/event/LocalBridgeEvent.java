@@ -46,6 +46,31 @@ public class LocalBridgeEvent extends ManagerEvent
     private String localOptimization;
     private String channel1;
     private String channel2;
+    private String localonecalleridname;
+    private String localtwochannel;
+    private String localtwolanguage;
+    private String localtwoexten;
+    private String localoneconnectedlinenum;
+    private Integer localtwopriority;
+    private String localtwocontext;
+    private String localtwocalleridnum;
+    private String localtwocalleridname;
+    private String localtwoconnectedlinenum;
+    private String localtwouniqueid;
+    private String localonecalleridnum;
+    private String localonechannelstatedesc;
+    private String localonecontext;
+    private String localoneconnectedlinename;
+    private Integer localonechannelstate;
+    private String localonechannel;
+    private String localonelanguage;
+    private String localtwochannelstatedesc;
+    private String localoneexten;
+    private String localoneuniqueid;
+    private Integer localonepriority;
+    private String localtwoconnectedlinename;
+    private Integer localtwochannelstate;
+    
 
     public LocalBridgeEvent(Object source)
     {
@@ -178,5 +203,125 @@ public class LocalBridgeEvent extends ManagerEvent
      */
     public void setLocalOptimization(String localOptimization) {
         this.localOptimization = localOptimization;
+    }
+
+    public String getLocalonecalleridname() {
+        return localonecalleridname;
+    }
+
+    public void setLocalonecalleridname(String localonecalleridname) {
+        this.localonecalleridname = localonecalleridname;
+    }
+
+    public String getLocaltwochannel() {
+        return localtwochannel;
+    }
+
+    public void setLocaltwochannel(String localtwochannel) {
+        this.localtwochannel = localtwochannel;
+    }
+
+    public String getLocaltwolanguage() {
+        return localtwolanguage;
+    }
+
+    public void setLocaltwolanguage(String localtwolanguage) {
+        this.localtwolanguage = localtwolanguage;
+    }
+
+    public String getLocaltwoexten() {
+        return localtwoexten;
+    }
+
+    public void setLocaltwoexten(String localtwoexten) {
+        this.localtwoexten = localtwoexten;
+    }
+
+    public String getLocaloneconnectedlinenum() {
+        return localoneconnectedlinenum;
+    }
+
+    public void setLocaloneconnectedlinenum(String localoneconnectedlinenum) {
+        this.localoneconnectedlinenum = localoneconnectedlinenum;
+    }
+
+    public Integer getLocaltwopriority() {
+        return localtwopriority;
+    }
+
+    public void setLocaltwopriority(Integer localtwopriority) {
+        this.localtwopriority = localtwopriority;
+    }
+
+    public String getLocaltwocontext() {
+        return localtwocontext;
+    }
+
+    public void setLocaltwocontext(String localtwocontext) {
+        this.localtwocontext = localtwocontext;
+    }
+
+    public String getLocaltwocalleridnum() {
+        return localtwocalleridnum;
+    }
+
+    public void setLocaltwocalleridnum(String localtwocalleridnum) {
+        this.localtwocalleridnum = localtwocalleridnum;
+    }
+
+    public String getLocaltwocalleridname() {
+        return localtwocalleridname;
+    }
+
+    public void setLocaltwocalleridname(String localtwocalleridname) {
+        this.localtwocalleridname = localtwocalleridname;
+    }
+
+    public String getLocaltwouniqueid() {
+        return localtwouniqueid;
+    }
+
+    public void setLocaltwouniqueid(String localtwouniqueid) {
+        this.localtwouniqueid = localtwouniqueid;
+    }
+
+    public String getLocalonecalleridnum() {
+        return localonecalleridnum;
+    }
+
+    public void setLocalonecalleridnum(String localonecalleridnum) {
+        this.localonecalleridnum = localonecalleridnum;
+    }
+
+    public String getLocalonechannelstatedesc() {
+        return localonechannelstatedesc;
+    }
+
+    public void setLocalonechannelstatedesc(String localonechannelstatedesc) {
+        this.localonechannelstatedesc = localonechannelstatedesc;
+    }
+
+    public String getLocalonecontext() {
+        return localonecontext;
+    }
+
+    public void setLocalonecontext(String localonecontext) {
+        this.localonecontext = localonecontext;
+    }
+
+    public String getLocaloneconnectedlinename() {
+        return localoneconnectedlinename;
+    }
+
+    public void setLocaloneconnectedlinename(String localoneconnectedlinename) {
+        this.localoneconnectedlinename = localoneconnectedlinename;
+    }
+
+    public Integer getLocalonechannelstate() {
+        return localonechannelstate;
+    }
+
+    public void setLocalonechannelstate(Integer localonechannelstate) {
+        this.localonechannelstate = localonechannelstate;
     }
 }

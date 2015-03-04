@@ -64,7 +64,20 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
     private Integer report0fractionlost;
     private Integer report0iajitter;
     private String to;
-    
+    private Integer report0lsr;
+    private String sentrtp;
+    private Integer channelstate;
+    private Integer sentoctets;
+    private Integer priority;
+    private String connectedlinename;
+    private String ssrc;
+    private Integer report0sequencenumbercycles;
+    private String connectedlinenum;
+    private String context;
+    private String calleridnum;
+    private String language;
+    private String channel;
+    private String calleridname;
 
     public RtcpReceivedEvent(Object source)
     {
@@ -309,5 +322,117 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
 
     public void setTo(String to) {
         this.to = to;
+    }
+
+    public Integer getReport0lsr() {
+        return report0lsr;
+    }
+
+    public void setReport0lsr(Integer report0lsr) {
+        this.report0lsr = report0lsr;
+    }
+
+    public String getSentrtp() {
+        return sentrtp;
+    }
+
+    public void setSentrtp(String sentrtp) {
+        this.sentrtp = sentrtp;
+    }
+
+    public Integer getChannelstate() {
+        return channelstate;
+    }
+
+    public void setChannelstate(Integer channelstate) {
+        this.channelstate = channelstate;
+    }
+
+    public Integer getSentoctets() {
+        return sentoctets;
+    }
+
+    public void setSentoctets(Integer sentoctets) {
+        this.sentoctets = sentoctets;
+    }
+
+    public Integer getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Integer priority) {
+        this.priority = priority;
+    }
+
+    public String getConnectedlinename() {
+        return connectedlinename;
+    }
+
+    public void setConnectedlinename(String connectedlinename) {
+        this.connectedlinename = connectedlinename;
+    }
+
+    public String getSsrc() {
+        return ssrc;
+    }
+
+    public void setSsrc(String ssrc) {
+        this.ssrc = ssrc;
+    }
+
+    public Integer getReport0sequencenumbercycles() {
+        return report0sequencenumbercycles;
+    }
+
+    public void setReport0sequencenumbercycles(Integer report0sequencenumbercycles) {
+        this.report0sequencenumbercycles = report0sequencenumbercycles;
+    }
+
+    public String getConnectedlinenum() {
+        return connectedlinenum;
+    }
+
+    public void setConnectedlinenum(String connectedlinenum) {
+        this.connectedlinenum = connectedlinenum;
+    }
+
+    public String getContext() {
+        return context;
+    }
+
+    public void setContext(String context) {
+        this.context = context;
+    }
+
+    public String getCalleridnum() {
+        return calleridnum;
+    }
+
+    public void setCalleridnum(String calleridnum) {
+        this.calleridnum = calleridnum;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public String getChannel() {
+        return channel;
+    }
+
+    public void setChannel(String channel) {
+        this.channel = channel;
+    }
+
+    public String getCalleridname() {
+        return calleridname;
+    }
+
+    public void setCalleridname(String calleridname) {
+        this.calleridname = calleridname;
     }
 }

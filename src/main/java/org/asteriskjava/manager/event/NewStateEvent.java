@@ -29,10 +29,48 @@ public class NewStateEvent extends AbstractChannelStateEvent
      * Serializable version identifier.
      */
     static final long serialVersionUID = -0L;
+    
+    private String language;
+    private String context;
+    private Integer priority;
+    private String exten;
+    
 
     public NewStateEvent(Object source)
     {
         super(source);
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public String getContext() {
+        return context;
+    }
+
+    public void setContext(String context) {
+        this.context = context;
+    }
+
+    public Integer getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Integer priority) {
+        this.priority = priority;
+    }
+
+    public String getExten() {
+        return exten;
+    }
+
+    public void setExten(String exten) {
+        this.exten = exten;
     }
 
 }
