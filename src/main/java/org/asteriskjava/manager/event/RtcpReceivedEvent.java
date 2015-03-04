@@ -52,6 +52,19 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
     private Long sequenceNumberCycles;
     private Double lastSr;
     private Double rtt;
+    private String report0sourcessrc;
+    private Double report0dlsr;
+    private String sentntp;
+    private Integer sentpackets;
+    private String uniqueid;
+    private String channelstatedesc;
+    private Integer reportcount;
+    private Integer report0cumulativelost;
+    private Integer report0highestsequence;
+    private Integer report0fractionlost;
+    private Integer report0iajitter;
+    private String to;
+    
 
     public RtcpReceivedEvent(Object source)
     {
@@ -200,5 +213,101 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
     public void setRtt(String rttString)
     {
         this.rtt = secStringToDouble(rttString);
+    }
+
+    public String getReport0sourcessrc() {
+        return report0sourcessrc;
+    }
+
+    public void setReport0sourcessrc(String report0sourcessrc) {
+        this.report0sourcessrc = report0sourcessrc;
+    }
+
+    public Double getReport0dlsr() {
+        return report0dlsr;
+    }
+
+    public void setReport0dlsr(Double report0dlsr) {
+        this.report0dlsr = report0dlsr;
+    }
+
+    public String getSentntp() {
+        return sentntp;
+    }
+
+    public void setSentntp(String sentntp) {
+        this.sentntp = sentntp;
+    }
+
+    public Integer getSentpackets() {
+        return sentpackets;
+    }
+
+    public void setSentpackets(Integer sentpackets) {
+        this.sentpackets = sentpackets;
+    }
+
+    public String getUniqueid() {
+        return uniqueid;
+    }
+
+    public void setUniqueid(String uniqueid) {
+        this.uniqueid = uniqueid;
+    }
+
+    public String getChannelstatedesc() {
+        return channelstatedesc;
+    }
+
+    public void setChannelstatedesc(String channelstatedesc) {
+        this.channelstatedesc = channelstatedesc;
+    }
+
+    public Integer getReportcount() {
+        return reportcount;
+    }
+
+    public void setReportcount(Integer reportcount) {
+        this.reportcount = reportcount;
+    }
+
+    public Integer getReport0cumulativelost() {
+        return report0cumulativelost;
+    }
+
+    public void setReport0cumulativelost(Integer report0cumulativelost) {
+        this.report0cumulativelost = report0cumulativelost;
+    }
+
+    public Integer getReport0highestsequence() {
+        return report0highestsequence;
+    }
+
+    public void setReport0highestsequence(Integer report0highestsequence) {
+        this.report0highestsequence = report0highestsequence;
+    }
+
+    public Integer getReport0fractionlost() {
+        return report0fractionlost;
+    }
+
+    public void setReport0fractionlost(Integer report0fractionlost) {
+        this.report0fractionlost = report0fractionlost;
+    }
+
+    public Integer getReport0iajitter() {
+        return report0iajitter;
+    }
+
+    public void setReport0iajitter(Integer report0iajitter) {
+        this.report0iajitter = report0iajitter;
+    }
+
+    public String getTo() {
+        return to;
+    }
+
+    public void setTo(String to) {
+        this.to = to;
     }
 }
