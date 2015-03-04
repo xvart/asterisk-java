@@ -324,4 +324,76 @@ public class LocalBridgeEvent extends ManagerEvent
     public void setLocalonechannelstate(Integer localonechannelstate) {
         this.localonechannelstate = localonechannelstate;
     }
+
+    public String getLocaltwoconnectedlinenum() {
+        return localtwoconnectedlinenum;
+    }
+
+    public void setLocaltwoconnectedlinenum(String localtwoconnectedlinenum) {
+        this.localtwoconnectedlinenum = localtwoconnectedlinenum;
+    }
+
+    public String getLocalonechannel() {
+        return localonechannel;
+    }
+
+    public void setLocalonechannel(String localonechannel) {
+        this.localonechannel = localonechannel;
+    }
+
+    public String getLocalonelanguage() {
+        return localonelanguage;
+    }
+
+    public void setLocalonelanguage(String localonelanguage) {
+        this.localonelanguage = localonelanguage;
+    }
+
+    public String getLocaltwochannelstatedesc() {
+        return localtwochannelstatedesc;
+    }
+
+    public void setLocaltwochannelstatedesc(String localtwochannelstatedesc) {
+        this.localtwochannelstatedesc = localtwochannelstatedesc;
+    }
+
+    public String getLocaloneexten() {
+        return localoneexten;
+    }
+
+    public void setLocaloneexten(String localoneexten) {
+        this.localoneexten = localoneexten;
+    }
+
+    public String getLocaloneuniqueid() {
+        return localoneuniqueid;
+    }
+
+    public void setLocaloneuniqueid(String localoneuniqueid) {
+        this.localoneuniqueid = localoneuniqueid;
+    }
+
+    public Integer getLocalonepriority() {
+        return localonepriority;
+    }
+
+    public void setLocalonepriority(Integer localonepriority) {
+        this.localonepriority = localonepriority;
+    }
+
+    public String getLocaltwoconnectedlinename() {
+        return localtwoconnectedlinename;
+    }
+
+    public void setLocaltwoconnectedlinename(String localtwoconnectedlinename) {
+        this.localtwoconnectedlinename = localtwoconnectedlinename;
+    }
+
+    public Integer getLocaltwochannelstate() {
+        return localtwochannelstate;
+    }
+
+    public void setLocaltwochannelstate(Integer localtwochannelstate) {
+        this.localtwochannelstate = localtwochannelstate;
+    }
 }
