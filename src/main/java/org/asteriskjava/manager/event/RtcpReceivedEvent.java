@@ -64,7 +64,7 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
     private Integer report0fractionlost;
     private Integer report0iajitter;
     private String to;
-    private Integer report0lsr;
+    private String report0lsr;
     private String sentrtp;
     private Integer channelstate;
     private Integer sentoctets;
@@ -324,11 +324,11 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
         this.to = to;
     }
 
-    public Integer getReport0lsr() {
+    public String getReport0lsr() {
         return report0lsr;
     }
 
-    public void setReport0lsr(Integer report0lsr) {
+    public void setReport0lsr(String report0lsr) {
         this.report0lsr = report0lsr;
     }
 
