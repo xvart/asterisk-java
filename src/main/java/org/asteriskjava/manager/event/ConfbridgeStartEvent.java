@@ -14,7 +14,13 @@ public class ConfbridgeStartEvent extends ManagerEvent
 
     private String conference;
     private String bridgecreator;
-    private String bridgename;
+    private String bridgename;	
+    private String bridgetechnology;
+    private String bridgetype;
+    private Integer bridgenumchannels;
+    private String bridgeuniqueid;
+
+    
     
 
     public ConfbridgeStartEvent(Object source)
@@ -56,5 +62,37 @@ public class ConfbridgeStartEvent extends ManagerEvent
 
     public void setBridgename(String bridgename) {
         this.bridgename = bridgename;
+    }
+
+    public String getBridgetechnology() {
+        return bridgetechnology;
+    }
+
+    public void setBridgetechnology(String bridgetechnology) {
+        this.bridgetechnology = bridgetechnology;
+    }
+
+    public String getBridgetype() {
+        return bridgetype;
+    }
+
+    public void setBridgetype(String bridgetype) {
+        this.bridgetype = bridgetype;
+    }
+
+    public Integer getBridgenumchannels() {
+        return bridgenumchannels;
+    }
+
+    public void setBridgenumchannels(Integer bridgenumchannels) {
+        this.bridgenumchannels = bridgenumchannels;
+    }
+
+    public String getBridgeuniqueid() {
+        return bridgeuniqueid;
+    }
+
+    public void setBridgeuniqueid(String bridgeuniqueid) {
+        this.bridgeuniqueid = bridgeuniqueid;
     }
 }

@@ -305,6 +305,10 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
     {
     }
     
+    protected void handleEvent(BridgeEnterEvent event)
+    {
+    }
+    
     protected void handleEvent(LocalBridgeEvent event)
     {
     }
@@ -643,6 +647,10 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
         else if (event instanceof BridgeEvent)
         {
             handleEvent((BridgeEvent) event);
+        }
+        else if (event instanceof BridgeEnterEvent)
+        {
+            handleEvent((BridgeEnterEvent) event);
         }
         else if (event instanceof LocalBridgeEvent)
         {

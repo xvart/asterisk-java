@@ -45,6 +45,11 @@ public class CoreShowChannelEvent extends ResponseEvent
     private String accountcode;
     private String bridgedChannel;
     private String bridgeduniqueid;
+    private String connectedlinenum;
+    private String connectedlinename;
+    private String exten;
+    private String language;
+    private String calleridname;
 
     public CoreShowChannelEvent(Object source)
     {
@@ -261,6 +266,46 @@ public class CoreShowChannelEvent extends ResponseEvent
     public void setUniqueid(String uniqueid)
     {
         this.uniqueid = uniqueid;
+    }
+
+    public String getConnectedlinenum() {
+        return connectedlinenum;
+    }
+
+    public void setConnectedlinenum(String connectedlinenum) {
+        this.connectedlinenum = connectedlinenum;
+    }
+
+    public String getConnectedlinename() {
+        return connectedlinename;
+    }
+
+    public void setConnectedlinename(String connectedlinename) {
+        this.connectedlinename = connectedlinename;
+    }
+
+    public String getExten() {
+        return exten;
+    }
+
+    public void setExten(String exten) {
+        this.exten = exten;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public String getCalleridname() {
+        return calleridname;
+    }
+
+    public void setCalleridname(String calleridname) {
+        this.calleridname = calleridname;
     }
 
     
