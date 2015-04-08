@@ -296,8 +296,8 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         eventClass = registeredEventClasses.get(eventType);
         if (eventClass == null)
         {
-            logger.info("No event class registered for event type '" + eventType + "', attributes: " + attributes
-                    + ". Please report at http://jira.reucon.org/browse/AJ");
+            logger.debug("No event class registered for event type '" + eventType + "', attributes: " + attributes
+                    + ". Please fix");
             return null;
         }
 

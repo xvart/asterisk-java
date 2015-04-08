@@ -73,8 +73,8 @@ abstract class AbstractBuilder
             // it seems silly to warn if it's a user event -- maybe it was intentional
             if (setter == null && !(target instanceof UserEvent))
             {
-                logger.warn("Unable to set property '" + entry.getKey() + "' to '" + entry.getValue() + "' on "
-                        + target.getClass().getName() + ": no setter. Please report at http://jira.reucon.org/browse/AJ");
+                logger.debug("Unable to set property '" + entry.getKey() + "' to '" + entry.getValue() + "' on "
+                        + target.getClass().getName() + ": no setter. Please fix");
             }
 
             if (setter == null)
