@@ -329,6 +329,10 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
     {
     }
 
+    protected void handleEvent(ContactStatusEvent event)
+    {
+    }
+
     protected void handleEvent(PeerlistCompleteEvent event)
     {
     }
@@ -671,6 +675,10 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
         else if (event instanceof PeerEntryEvent)
         {
             handleEvent((PeerEntryEvent) event);
+        }
+        else if (event instanceof ContactStatusEvent)
+        {
+            handleEvent((ContactStatusEvent) event);
         }
         else if (event instanceof PeerlistCompleteEvent)
         {
