@@ -296,6 +296,9 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
     protected void handleEvent(JoinEvent event)
     {
     }
+    protected void handleEvent(QueueCallerJoinEvent event)
+    {
+    }
 
     protected void handleEvent(LeaveEvent event)
     {
@@ -495,6 +498,10 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
         else if (event instanceof JoinEvent)
         {
             handleEvent((JoinEvent) event);
+        }
+        else if (event instanceof QueueCallerJoinEvent)
+        {
+            handleEvent((QueueCallerJoinEvent) event);
         }
         else if (event instanceof LeaveEvent)
         {

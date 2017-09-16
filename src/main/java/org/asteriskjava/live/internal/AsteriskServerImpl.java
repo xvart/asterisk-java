@@ -985,6 +985,10 @@ public class AsteriskServerImpl implements AsteriskServer, ManagerEventListener
         {
             queueManager.handleJoinEvent((JoinEvent) event);
         }
+        else if (event instanceof QueueCallerJoinEvent)
+        {
+            queueManager.handleQueueCallerJoinEvent((QueueCallerJoinEvent) event);
+        }
         else if (event instanceof LeaveEvent)
         {
             queueManager.handleLeaveEvent((LeaveEvent) event);
