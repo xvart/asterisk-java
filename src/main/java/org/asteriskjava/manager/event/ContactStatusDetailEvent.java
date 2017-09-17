@@ -23,7 +23,7 @@ package org.asteriskjava.manager.event;
  * @version $Id$
  * @since 0.2
  */
-public class ContactStatusDetailEvent extends ResponseEvent {
+public class ContactStatusDetailEvent extends ManagerEvent {
 
     /**
      * Serial version identifier.

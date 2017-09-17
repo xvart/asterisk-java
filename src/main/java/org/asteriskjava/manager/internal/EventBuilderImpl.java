@@ -76,6 +76,8 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(ConfbridgeListRoomsCompleteEvent.class);
         registerEventClass(ConfbridgeStartEvent.class);
         registerEventClass(ConfbridgeTalkingEvent.class);
+        registerEventClass(ContactStatusEvent.class);
+        registerEventClass(ContactStatusDetailEvent.class);
         registerEventClass(CoreShowChannelEvent.class);
         registerEventClass(CoreShowChannelsCompleteEvent.class);
         registerEventClass(DAHDIChannelEvent.class);
@@ -148,7 +150,7 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(QueueEntryEvent.class);
         registerEventClass(QueueMemberAddedEvent.class);
         registerEventClass(QueueMemberEvent.class);
-        registerEventClass(QueueMemberPausedEvent.class);
+        registerEventClass(QueueMemberPauseEvent.class);
         registerEventClass(QueueMemberPenaltyEvent.class);
         registerEventClass(QueueMemberRemovedEvent.class);
         registerEventClass(QueueMemberStatusEvent.class);

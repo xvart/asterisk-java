@@ -1088,6 +1088,13 @@ public class ManagerConnectionImpl implements ManagerConnection, Dispatcher
         return sb.toString();
     }
 
+    /**
+     * Adds  listener to the list.
+     * 
+     * <p>Only add if not already included, preventing multiple registrations.</p>
+     * @param listener 
+     */
+    @Override
     public void addEventListener(final ManagerEventListener listener)
     {
         synchronized (this.eventListeners)
@@ -1100,6 +1107,7 @@ public class ManagerConnectionImpl implements ManagerConnection, Dispatcher
         }
     }
 
+    @Override
     public void removeEventListener(final ManagerEventListener listener)
     {
         synchronized (this.eventListeners)
@@ -1131,6 +1139,7 @@ public class ManagerConnectionImpl implements ManagerConnection, Dispatcher
      * @param response the response received by the reader
      * @see ManagerReader
      */
+    @Override
     public void dispatchResponse(ManagerResponse response)
     {
         final String actionId;

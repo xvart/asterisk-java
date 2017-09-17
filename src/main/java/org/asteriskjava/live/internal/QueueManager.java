@@ -376,7 +376,7 @@ class QueueManager
         queue.fireMemberStateChanged(member);
     }
 
-    void handleQueueMemberPausedEvent(QueueMemberPausedEvent event) {
+    void handleQueueMemberPausedEvent(QueueMemberPauseEvent event) {
         AsteriskQueueImpl queue = getQueueByName(event.getQueue());
 
         if (queue == null)

@@ -17,8 +17,8 @@
 package org.asteriskjava.manager.event;
 
 /**
- * A QueueMemberPausedEvent is triggered when a queue member is paused or
- * unpaused.<p>
+ * A QueueMemberPauseEvent is triggered when a queue member is paused or
+ unpaused.<p>
  * It is implemented in <code>apps/app_queue.c</code>.<p>
  * Available since Asterisk 1.2
  *
@@ -26,7 +26,7 @@ package org.asteriskjava.manager.event;
  * @version $Id$
  * @since 0.2
  */
-public class QueueMemberPausedEvent extends AbstractQueueMemberEvent
+public class QueueMemberPauseEvent extends AbstractQueueMemberEvent
 {
     /**
      * Serial version identifier.
@@ -40,7 +40,7 @@ public class QueueMemberPausedEvent extends AbstractQueueMemberEvent
      */
     private String reason;
 
-    public QueueMemberPausedEvent(Object source)
+    public QueueMemberPauseEvent(Object source)
     {
         super(source);
     }

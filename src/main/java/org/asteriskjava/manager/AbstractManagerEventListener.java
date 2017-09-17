@@ -265,7 +265,7 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
     {
     }
 
-    protected void handleEvent(QueueMemberPausedEvent event)
+    protected void handleEvent(QueueMemberPauseEvent event)
     {
     }
 
@@ -663,9 +663,9 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
         {
             handleEvent((QueueMemberAddedEvent) event);
         }
-        else if (event instanceof QueueMemberPausedEvent)
+        else if (event instanceof QueueMemberPauseEvent)
         {
-            handleEvent((QueueMemberPausedEvent) event);
+            handleEvent((QueueMemberPauseEvent) event);
         }
         else if (event instanceof QueueMemberRemovedEvent)
         {

@@ -17,16 +17,14 @@
 package org.asteriskjava.manager.event;
 
 /**
- * A PeerEntryEvent is triggered in response to a {@link org.asteriskjava.manager.action.SipPeersAction},
- * {@link org.asteriskjava.manager.action.SipShowPeerAction} or {@link org.asteriskjava.manager.action.IaxPeerListAction}
- * and contains information about a SIP or IAX peer.<p>
- * It is implemented in <code>channels/chan_sip.c</code> and <code>channels/chan_iax.c</code>
+ * A ContactStatusEvent 
+ * 
  *
  * @author srt
  * @version $Id$
  * @since 0.2
  */
-public class ContactStatusEvent extends ResponseEvent
+public class ContactStatusEvent extends ManagerEvent
 {
 
     /**
