@@ -29,6 +29,29 @@ package org.asteriskjava.manager.event;
 public class ContactStatusEvent extends ResponseEvent
 {
 
+    /**
+     * Serial version identifier.
+     */
+    private static final long serialVersionUID = 0L;
+
+    private String aor;
+    private String uri;
+    private String contactStatus;
+    private String endpointName;
+    private String privilege;
+    private String roundTripUsec;
+    
+
+    /**
+     * Creates a new instance.
+     *
+     * @param source
+     */
+    public ContactStatusEvent(Object source)
+    {
+        super(source);
+    }
+
     public String getAor() {
         return aor;
     }
@@ -76,29 +99,6 @@ public class ContactStatusEvent extends ResponseEvent
     public void setSource(Object source) {
         this.source = source;
     }
-    /**
-     * Serial version identifier.
-     */
-    private static final long serialVersionUID = 0L;
-
-    private String aor;
-    private String uri;
-    private String contactStatus;
-    private String endpointName;
-    private String privilege;
-    private String roundTripUsec;
-    
-
-    /**
-     * Creates a new instance.
-     *
-     * @param source
-     */
-    public ContactStatusEvent(Object source)
-    {
-        super(source);
-    }
-
     public String getUri() {
         return uri;
     }

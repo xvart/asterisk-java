@@ -93,6 +93,9 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(DongleDeviceEntryEvent.class);
         registerEventClass(DongleShowDevicesCompleteEvent.class);
         registerEventClass(DtmfEvent.class);
+        registerEventClass(EndpointDetailEvent.class);
+        registerEventClass(EndpointListEvent.class);
+        registerEventClass(EndpointListCompleteEvent.class);
         registerEventClass(ExtensionStatusEvent.class);
         registerEventClass(FaxDocumentStatusEvent.class);
         registerEventClass(FaxReceivedEvent.class);

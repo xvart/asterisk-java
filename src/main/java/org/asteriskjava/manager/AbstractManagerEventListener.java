@@ -125,6 +125,18 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
     {
     }
 
+    protected void handleEvent(EndpointDetailEvent event)
+    {
+    }
+
+    protected void handleEvent(EndpointListEvent event)
+    {
+    }
+
+    protected void handleEvent(EndpointListCompleteEvent event)
+    {
+    }
+
     protected void handleEvent(ExtensionStatusEvent event)
     {
     }
@@ -336,6 +348,10 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
     {
     }
 
+    protected void handleEvent(ContactStatusDetailEvent event)
+    {
+    }
+
     protected void handleEvent(PeerlistCompleteEvent event)
     {
     }
@@ -462,6 +478,18 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
         else if (event instanceof DndStateEvent)
         {
             handleEvent((DndStateEvent) event);
+        }
+        else if (event instanceof EndpointDetailEvent)
+        {
+            handleEvent((EndpointDetailEvent) event);
+        }
+        else if (event instanceof EndpointListEvent)
+        {
+            handleEvent((EndpointListEvent) event);
+        }
+        else if (event instanceof EndpointListCompleteEvent)
+        {
+            handleEvent((EndpointListCompleteEvent) event);
         }
         else if (event instanceof ExtensionStatusEvent)
         {
@@ -686,6 +714,10 @@ public abstract class AbstractManagerEventListener implements ManagerEventListen
         else if (event instanceof ContactStatusEvent)
         {
             handleEvent((ContactStatusEvent) event);
+        }
+        else if (event instanceof ContactStatusDetailEvent)
+        {
+            handleEvent((ContactStatusDetailEvent) event);
         }
         else if (event instanceof PeerlistCompleteEvent)
         {
