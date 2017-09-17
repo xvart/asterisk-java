@@ -32,6 +32,7 @@ import org.asteriskjava.live.LinkedChannelHistoryEntry;
 import org.asteriskjava.live.ManagerCommunicationException;
 import org.asteriskjava.live.NoSuchChannelException;
 import org.asteriskjava.manager.action.AbsoluteTimeoutAction;
+import org.asteriskjava.manager.action.BlindTransferAction;
 import org.asteriskjava.manager.action.ChangeMonitorAction;
 import org.asteriskjava.manager.action.GetVarAction;
 import org.asteriskjava.manager.action.HangupAction;
