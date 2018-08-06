@@ -214,6 +214,9 @@ public class ManagerConnectionImpl implements ManagerConnection, Dispatcher
      */
     private final List<ManagerEventListener> eventListeners;
 
+    /**
+     *
+     */
     protected ManagerConnectionState state = INITIAL;
 
     private String eventMask;
@@ -232,11 +235,22 @@ public class ManagerConnectionImpl implements ManagerConnection, Dispatcher
 
     // the following two methods can be overriden when running test cases to
     // return a mock object
+
+    /**
+     *
+     * @param dispatcher
+     * @param source
+     * @return
+     */
     protected ManagerReader createReader(Dispatcher dispatcher, Object source)
     {
         return new ManagerReaderImpl(dispatcher, source);
     }
 
+    /**
+     *
+     * @return
+     */
     protected ManagerWriter createWriter()
     {
         return new ManagerWriterImpl();
@@ -606,6 +620,12 @@ public class ManagerConnectionImpl implements ManagerConnection, Dispatcher
         fireEvent(connectEvent);
     }
 
+    /**
+     *
+     * @return
+     * @throws IOException
+     * @throws TimeoutException
+     */
     protected AsteriskVersion determineVersion() throws IOException, TimeoutException
     {
         int attempts = 0;
@@ -637,7 +657,7 @@ public class ManagerConnectionImpl implements ManagerConnection, Dispatcher
             if (showVersionFilesResult != null && showVersionFilesResult.size() > 0)
             {
                 logger.warn("Testing Asterisk version less than 1.4");
-                
+
                 final String line1 = showVersionFilesResult.get(0);
 
                 if (line1.startsWith("File"))
@@ -672,14 +692,22 @@ public class ManagerConnectionImpl implements ManagerConnection, Dispatcher
         // return AsteriskVersion.ASTERISK_13;
     }
 
+    /**
+     *
+     * @return
+     * @throws IOException
+     * @throws IllegalStateException
+     * @throws IllegalArgumentException
+     * @throws TimeoutException
+     */
     public AsteriskVersion testRecentVersions() throws IOException, IllegalStateException, IllegalArgumentException, TimeoutException {
         logger.warn("Testing Asterisk version greater than 1.4");
         final ManagerResponse coreShowVersionResponse = sendAction(new CommandAction("core show version"), defaultResponseTimeout * 2);
-        
+
         logger.warn(coreShowVersionResponse.toString());
-        
+
         if (coreShowVersionResponse != null && coreShowVersionResponse instanceof CommandResponse) {
-            
+
             final List<String> coreShowVersionResult = ((CommandResponse) coreShowVersionResponse).getResult();
             AsteriskVersion av = null;
             if (coreShowVersionResult != null && coreShowVersionResult.size() > 0) {
@@ -728,7 +756,11 @@ public class ManagerConnectionImpl implements ManagerConnection, Dispatcher
         } // NOPMD
         return null;
     }
-    
+
+    /**
+     *
+     * @return
+     */
     protected String getRawVersion()
     {
         final ManagerResponse showVersionResponse;
@@ -756,6 +788,10 @@ public class ManagerConnectionImpl implements ManagerConnection, Dispatcher
         return null;
     }
 
+    /**
+     *
+     * @throws IOException
+     */
     protected synchronized void connect() throws IOException
     {
         logger.info("Connecting to " + hostname + ":" + port);
@@ -792,6 +828,11 @@ public class ManagerConnectionImpl implements ManagerConnection, Dispatcher
         writer.setSocket(socket);
     }
 
+    /**
+     *
+     * @return
+     * @throws IOException
+     */
     protected SocketConnectionFacade createSocket() throws IOException
     {
         return new SocketConnectionFacadeImpl(hostname, port, ssl, socketTimeout, socketReadTimeout);
@@ -1090,9 +1131,9 @@ public class ManagerConnectionImpl implements ManagerConnection, Dispatcher
 
     /**
      * Adds  listener to the list.
-     * 
+     *
      * <p>Only add if not already included, preventing multiple registrations.</p>
-     * @param listener 
+     * @param listener
      */
     @Override
     public void addEventListener(final ManagerEventListener listener)

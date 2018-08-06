@@ -118,6 +118,11 @@ public class ManagerReaderImpl implements ManagerReader
         eventBuilder.registerEventClass(eventClass);
     }
 
+    /**
+     *
+     * @param internalActionId
+     * @param responseClass
+     */
     public void expectResponseClass(String internalActionId, Class<? extends ManagerResponse> responseClass)
     {
         expectedResponseClasses.put(internalActionId, responseClass);

@@ -58,6 +58,10 @@ public class ResponseEventsImpl implements ResponseEvents
         return events;
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean isComplete()
     {
         return complete;

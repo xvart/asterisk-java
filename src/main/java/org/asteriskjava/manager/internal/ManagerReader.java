@@ -37,6 +37,10 @@ import org.asteriskjava.util.SocketConnectionFacade;
  */
 public interface ManagerReader extends Runnable
 {
+
+    /**
+     *
+     */
     String COMMAND_RESULT_RESPONSE_KEY = "__result__";
 
     /**
@@ -56,6 +60,11 @@ public interface ManagerReader extends Runnable
      */
     void registerEventClass(Class<? extends ManagerEvent> event);
 
+    /**
+     *
+     * @param internalActionId
+     * @param responseClass
+     */
     void expectResponseClass(String internalActionId, Class<? extends ManagerResponse> responseClass);
 
     /**

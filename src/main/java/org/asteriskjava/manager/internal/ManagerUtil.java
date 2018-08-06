@@ -30,6 +30,10 @@ package org.asteriskjava.manager.internal;
  */
 public class ManagerUtil
 {
+
+    /**
+     *
+     */
     public static final char INTERNAL_ACTION_ID_DELIMITER = '#';
 
     /**
